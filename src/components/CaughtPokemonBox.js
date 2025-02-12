@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { GameContext } from '../context/GameContext';
 import { motion } from 'framer-motion';
 
-const CatchedPokemonBox = () => {
+const CaughtPokemonBox = () => {
   const { caughtPokemon } = useContext(GameContext);
 
   const caughtPokemonVariants = {
@@ -34,4 +34,4 @@ const CatchedPokemonBox = () => {
   );
 };
 
-export default CatchedPokemonBox;
+export default CaughtPokemonBox;

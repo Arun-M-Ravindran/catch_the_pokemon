@@ -19,7 +19,7 @@ export const GameProvider = ({ children }) => {
    */
   const fetchRandomPokemon = async () => {
     try {
-      const randomNumber = Math.floor(Math.random() * 898) + 1;
+      const randomNumber = Math.floor(Math.random() * 1025) + 1;
       const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${randomNumber}`);
       setPokemon(response.data);
     } catch (error) {
@@ -45,7 +45,7 @@ export const GameProvider = ({ children }) => {
     if (catchCount >= 5) {
       setIsWinner(true);
     }
-  }, [catchCount, caughtPokemon]);
+  }, [catchCount]);
 
   const value = {
     pokemon,

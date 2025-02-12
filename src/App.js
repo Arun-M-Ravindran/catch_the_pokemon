@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import DisplayPokemon from './components/DisplayPokemon';
-import CatchedPokemonBox from './components/CatchedPokemonBox';
+import CaughtPokemonBox from './components/CaughtPokemonBox';
 import Controls from './components/Controls';
 import Win from './components/Win';
 import { GameProvider } from './context/GameContext';
@@ -14,7 +14,7 @@ function App() {
         <Header />
         <DisplayPokemon />
         <Win />
-        <CatchedPokemonBox />
+        <CaughtPokemonBox />
         <Controls />
       </div>
     </GameProvider>
