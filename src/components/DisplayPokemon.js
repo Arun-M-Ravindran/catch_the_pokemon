@@ -27,18 +27,21 @@ const DisplayPokemon = () => {
       {isRestartRequired ? (
         <p><span className='c-orange-red'>You have already won the game; please restart</span></p>
       ) : (
-        <motion.div
-          className="pokemon-display"
-          variants={pokemonVariants}
-          initial="initial"
-          animate="animate"
-          whileTap={{ scale: 1.2 }}
-          exit="exit"
-          onClick={handleCatch}
-        >
-          <h2>{pokemon.name}</h2>
-          <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-        </motion.div>
+        <div className="display-pokemon-region">
+          <motion.div
+            className="pokemon-display"
+            style={{ marginLeft: `${Math.floor(Math.random() * 60) + 1}%`, marginTop: `${Math.floor(Math.random() * 5) + 1}%` }}
+            variants={pokemonVariants}
+            initial="initial"
+            animate="animate"
+            whileTap={{ scale: 1.2 }}
+            exit="exit"
+            onClick={handleCatch}
+          >
+            <h2>{pokemon.name}</h2>
+            <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+          </motion.div>
+        </div>
       )}
     </>
   );

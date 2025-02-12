@@ -10,9 +10,9 @@ export const GameProvider = ({ children }) => {
   const [isWinner, setIsWinner] = useState(false);
   const [isRestartRequired, setIsRestartRequired] = useState(false);
 
-  useEffect(() => {
-    fetchRandomPokemon();
-  }, []);
+  // useEffect(() => {
+  //   fetchRandomPokemon();
+  // }, []);
 
   /**
    * Function to fetch random pokemon
@@ -42,8 +42,11 @@ export const GameProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    console.log("Called")
     if (catchCount >= 5) {
       setIsWinner(true);
+    } else {
+      fetchRandomPokemon();
     }
   }, [catchCount]);
 

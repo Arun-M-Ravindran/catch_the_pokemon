@@ -9,22 +9,22 @@
   color: rgb(255, 255, 255);
 }
 
-@media (max-width: 600px) {
-  .pokemon-display {
-    width: 90%;
-  }
-
-  .caught-pokemon-item {
-    width: 80px;
-  }
-}
-
 .pokemon-display {
   border: 1px solid #ccc;
   padding: 20px;
   margin: 20px auto;
   width: 300px;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .pokemon-display {
+    width: 100px;
+  }
+
+  .caught-pokemon-item {
+    width: 80px;
+  }
 }
 
 .pokemon-display:hover {
@@ -95,4 +95,10 @@ p::first-letter {
 
 .c-orange-red {
   color: orangered;
+}
+
+.display-pokemon-region {
+  height: 50vh;
+  border: 1px solid grey;
+  padding: 5px;
 }
