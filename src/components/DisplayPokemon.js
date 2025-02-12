@@ -25,13 +25,14 @@ const DisplayPokemon = () => {
   return (
     <>
       {isRestartRequired ? (
-        <p><span className='c-orange-red'>You already won the Game, Please restart</span></p>
+        <p><span className='c-orange-red'>You have already won the game; please restart</span></p>
       ) : (
         <motion.div
           className="pokemon-display"
           variants={pokemonVariants}
           initial="initial"
           animate="animate"
+          whileTap={{ scale: 1.2 }}
           exit="exit"
           onClick={handleCatch}
         >
